@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap');
+
+:root {
+  --primary-color: #fce4ec; /* Light pink background */
+  --secondary-color: #f8bbd0; /* Soft rose */
+  --accent-color: #ff4081; /* Pop of pink for active/buttons */
+  --text-dark: #4a148c; /* Deep purple/dark pink for text */
+  --text-light: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-accent: 'Great Vibes', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--primary-color);
+  color: var(--text-dark);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+body {
+  background: linear-gradient(135deg, #fce4ec 0%, #ffcdd2 100%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(255, 105, 135, 0.1);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #d81b60, #880e4f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f48fb1;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+}
